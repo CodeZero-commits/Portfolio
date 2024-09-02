@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
+:root {
+  --primary-color: #ffa500;
+  --background-color: #121212;
+  --text-color: #ffffff;
+}
+
+body {
+  font-family: "Zen Dots", cursive, Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  padding: 20px 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text-color);
+  font-family: "Zen Dots", cursive;
+}
+/*Hero Start*/
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
+
+.hero {
+  background-color: #1a1a1a;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: "Zen Dots", cursive;
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+/*Hero End*/
+/*Services Start*/
+.services {
+  background-color: #1a1a1a;
+  padding: 50px 20px;
+  color: white;
+}
+
+.services-title {
+  font-family: "Zen Dots", cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 50px;
+  line-height: 1.4;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.service-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.ux-ui-icon {
+  background: url("UIDESIGN.png") no-repeat center center;
+  background-size: contain;
+}
+
+.illustration-icon {
+  background: url("ILLUSTRATION.png") no-repeat center center;
+  background-size: contain;
+}
+
+.animation-icon {
+  background: url("ANIMATION.png") no-repeat center center;
+  background-size: contain;
+}
+
+.development-icon {
+  background: url("DEVELOPMENT.png") no-repeat center center;
+  background-size: contain;
+}
+
+.service-item h3 {
+  font-family: "Zen Dots", cursive;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.service-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-title {
+    font-size: 2rem;
+  }
+}
+/*Services End*/
+/*Portfolio Start*/
+.portfolio {
+  background-color: #1a1a1a;
+  padding: 50px 20px;
+  color: white;
+}
+
+.portfolio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.portfolio h2 {
+  font-family: "Zen Dots", cursive;
+  font-size: 2rem;
+}
+
+.category-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-family: "Zen Dots", cursive;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.category-btn:hover,
+.category-btn.active {
+  background-color: #555;
+}
+
+.portfolio-carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.portfolio-carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  flex: 0 0 300px;
+  width: 300px;
+  height: 300px;
+  margin-right: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+.carousel-control:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-category {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #1a1a1a;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .portfolio-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .category-buttons {
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  .carousel-item {
+    flex: 0 0 250px;
+    width: 250px;
+    height: 250px;
+  }
+}
+/*Portfolio End*/
+/*Services Start*/
+.services-process {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 40px 20px;
+  font-family: "Zen Dots", sans-serif;
+}
+
+.services-process h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.accordion {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 2px solid #00a2ff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #333;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.icon-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.process-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.toggle-icon {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 15px;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 200px;
+  padding: 15px;
+}
+
+.accordion-item.active .toggle-icon {
+  transform: rotate(180deg);
+}
+/*Services End*/
+
+.cta {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+  padding: 50px 0;
+}
+
+.cta a {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.cta h2 {
+  font-size: 32px;
+}
+
+@media (max-width: 768px) {
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-item {
+    width: 100%;
+  }
+
+  .innovation-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .innovation-buttons button {
+    margin: 5px 0;
+  }
+}

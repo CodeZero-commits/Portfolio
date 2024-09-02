@@ -1,0 +1,147 @@
+/* Estilos generales de la sección de portafolio */
+.portfolio {
+  background-color: #1a1a1a;
+  padding: 50px 20px;
+  color: white;
+}
+
+.portfolio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.portfolio h2 {
+  font-family: "Zen Dots", cursive;
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Estilos para los botones de categoría */
+.category-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-family: "Zen Dots", cursive;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.category-btn:hover,
+.category-btn.active {
+  background-color: #555;
+}
+
+/* Estilos del contenedor del carrusel */
+.portfolio-carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Estilos del carrusel */
+.portfolio-carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* Estilos de los elementos del carrusel */
+.carousel-item {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Estilos para la etiqueta de categoría en cada item */
+.image-category {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #1a1a1a;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  z-index: 2;
+}
+
+/* Estilos para los controles del carrusel */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-control:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+
+/* Media queries para diseño responsivo */
+@media (max-width: 768px) {
+  .portfolio-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .category-buttons {
+    margin-top: 20px;
+  }
+
+  .carousel-item {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio h2 {
+    font-size: 1.5rem;
+  }
+
+  .category-btn {
+    font-size: 0.7rem;
+    padding: 8px 12px;
+  }
+
+  .carousel-item {
+    height: 200px;
+  }
+}
