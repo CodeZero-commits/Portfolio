@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | NexaLink</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
+      :root {
+        --primary-color: #ffa500;
+        --background-color: #121212;
+        --text-color: #ffffff;
+      }
+      * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        list-style: none;
+        text-decoration: none;
+      }
+      body {
+        font-family: "Zen Dots", cursive, Arial, sans-serif;
+        background-color: var(--background-color);
+
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .login-container {
+        background-color: rgb(34, 34, 34);
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 350px;
+        color: var(--text-color);
+      }
+      .login-container h2 {
+        text-align: center;
+        color: var(--text-color);
+        margin-bottom: 1.5rem;
+      }
+      .form-group {
+        margin-bottom: 1rem;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: var(--text-color);
+      }
+      .form-group input {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+      }
+      .form-group input:focus {
+        outline: none;
+        border-color: #4285f4;
+      }
+      .submit-btn {
+        width: 100%;
+        padding: 0.75rem;
+        background-color: #4285f4;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .submit-btn:hover {
+        background-color: #3367d6;
+      }
+      .form-text {
+        display: block;
+        margin-top: 0.25rem;
+        font-size: 0.575rem;
+        color: var(--text-color);
+      }
+      a {
+        color: var(--text-color);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Iniciar Sesión</h2>
+      <form action="dashboard.html" method="GET">
+        <div class="form-group">
+          <label for="username">Nombre de usuario</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            required
+            placeholder="Ingrese su nombre de usuario"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Contraseña</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            placeholder="Ingrese su contraseña"
+          />
+          <small class="form-text"
+            >Nunca comparta su contraseña con nadie.</small
+          >
+        </div>
+        <button type="submit" class="submit-btn">Ingresar</button><br /><br />
+        <a href="index.html">Regresar</a>
+      </form>
+    </div>
+  </body>
+</html>

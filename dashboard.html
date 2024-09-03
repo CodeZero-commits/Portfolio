@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard de Manuales</title>
+    <link rel="stylesheet" href="assets/css/dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <header>
+        <h1>NexaLink</h1>
+        <nav>
+          <a href="#" class="active">Manuales</a>
+          <a href="index.html">Salir</a>
+        </nav>
+      </header>
+      <main>
+        <div class="category-list">
+          <h2>Categorías de Manuales</h2>
+          <div id="category-cards" class="category-cards">
+            <div class="category-card" data-category="diseno-desarrollo-web">
+              <h3>Lista de servicios</h3>
+              <p>Clic para leer</p>
+            </div>
+            <div class="category-card" data-category="manual-General-de-Ventas">
+              <h3>
+                Manual General de Ventas de Servicios de Diseño y Desarrollo
+              </h3>
+              <p>Clic para leer</p>
+            </div>
+            <div
+              class="category-card"
+              data-category="manual-de-Ventas-FoodFlow"
+            >
+              <h3>Manual de Venta: FoodFlow</h3>
+              <p>Clic para leer</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div id="manualListPopup" class="popup">
+      <div class="popup-content">
+        <span class="close">&times;</span>
+        <h2 id="categoryTitle"></h2>
+        <div id="manualList"></div>
+      </div>
+    </div>
+
+    <div id="manualesContenido" style="display: none">
+      <div data-category="diseno-desarrollo-web">
+        <div class="manual">
+          <h4>Lista de servicios</h4>
+          <div class="services-list">
+            <div class="service-category">
+              <h3>1. Diseño y Desarrollo Web</h3>
+              <div class="service-subcategory">
+                <h4>Diseño de Interfaces Web</h4>
+                <ul class="service-items">
+                  <li>Creación de wireframes y prototipos</li>
+                  <li>
+                    Diseño responsivo y adaptable a diferentes dispositivos
+                  </li>
+                  <li>
+                    Selección de paletas de colores, tipografía, y elementos
+                    visuales
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Desarrollo Back-End</h4>
+                <ul class="service-items">
+                  <li>
+                    Programación en lenguajes como PHP, Node.js, Python, Ruby
+                  </li>
+                  <li>Desarrollo de APIs y servicios web</li>
+                  <li>
+                    Integración con bases de datos (MySQL, PostgreSQL, MongoDB)
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Desarrollo de CMS (Content Management System)</h4>
+                <ul class="service-items">
+                  <li>
+                    Implementación y personalización de sistemas como WordPress,
+                    Drupal, Joomla.
+                  </li>
+                  <li>Desarrollo de plugins y módulos personalizados.</li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Mantenimiento y Soporte Web</h4>
+                <ul class="service-items">
+                  <li>Actualización de contenidos.</li>
+                  <li>Solución de problemas técnicos.</li>
+                  <li>Monitoreo y optimización del rendimiento.</li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Hosting y Dominio</h4>
+                <ul class="service-items">
+                  <li>Gestión de servidores y alojamiento web.</li>
+                  <li>Configuración de dominios y DNS.</li>
+                  <li>Implementación de certificados SSL.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="service-category">
+              <h3>2. Diseño y Desarrollo de Aplicaciones Móviles</h3>
+              <div class="service-subcategory">
+                <h4>Diseño de Interfaces de Usuario para Móviles</h4>
+                <ul class="service-items">
+                  <li>Creación de prototipos y mockups.</li>
+                  <li>Diseño adaptado a iOS y Android.</li>
+                  <li>Experiencia de usuario móvil (UX móvil).</li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Desarrollo Nativo</h4>
+                <ul class="service-items">
+                  <li>Desarrollo de aplicaciones en Swift para iOS.</li>
+                  <li>
+                    Desarrollo de aplicaciones en Kotlin/Java para Android.
+                  </li>
+                  <li>
+                    Integración con servicios nativos como GPS, cámaras,
+                    notificaciones.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Desarrollo Híbrido y Cross-Platform</h4>
+                <ul class="service-items">
+                  <li>
+                    Uso de frameworks como Flutter, React Native, Xamarin.
+                  </li>
+                  <li>
+                    Creación de aplicaciones compatibles con múltiples
+                    plataformas.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Integración con Servicios de Backend</h4>
+                <ul class="service-items">
+                  <li>Desarrollo de APIs para comunicación con servidores.</li>
+                  <li>
+                    Integración con bases de datos y almacenamiento en la nube.
+                  </li>
+                  <li>Implementación de autenticación y seguridad.</li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Mantenimiento y Actualización de Aplicaciones</h4>
+                <ul class="service-items">
+                  <li>
+                    Corrección de errores y actualizaciones de compatibilidad.
+                  </li>
+                  <li>Optimización del rendimiento y la seguridad.</li>
+                  <li>Soporte técnico continuo.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="service-category">
+              <h3>3. Diseño y Desarrollo de Software de Escritorio</h3>
+              <div class="service-subcategory">
+                <h4>Diseño de Interfaces de Usuario para Escritorio</h4>
+                <ul class="service-items">
+                  <li>
+                    Creación de UI adaptadas a sistemas operativos específicos
+                    (Windows, macOS, Linux).
+                  </li>
+                  <li>
+                    Diseño de aplicaciones con enfoque en usabilidad y
+                    eficiencia.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Desarrollo de Software Nativo</h4>
+                <ul class="service-items">
+                  <li>Programación en lenguajes como C#, Java, C++.</li>
+                  <li>
+                    Desarrollo de aplicaciones empresariales y personalizadas.
+                  </li>
+                  <li>Integración con hardware y dispositivos externos.</li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Desarrollo de Software Cross-Platform</h4>
+                <ul class="service-items">
+                  <li>
+                    Uso de herramientas como Electron, Qt para crear
+                    aplicaciones multiplataforma.
+                  </li>
+                  <li>
+                    Mantenimiento de consistencia en UI y UX en diferentes
+                    sistemas operativos.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Integración de Bases de Datos</h4>
+                <ul class="service-items">
+                  <li>Conexión con bases de datos locales y remotas.</li>
+                  <li>Desarrollo de sistemas de gestión de información.</li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Soporte y Mantenimiento de Software</h4>
+                <ul class="service-items">
+                  <li>Actualizaciones periódicas.</li>
+                  <li>Soporte técnico y corrección de errores.</li>
+                  <li>Personalización según las necesidades del cliente.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="service-category">
+              <h3>4. Marketing Digital, Community Manager y Diseño Gráfico</h3>
+              <div class="service-subcategory">
+                <h4>Estrategias de Marketing Digital</h4>
+                <ul class="service-items">
+                  <li>
+                    Desarrollo de campañas de publicidad en redes sociales
+                    (Facebook Ads, Google Ads).
+                  </li>
+                  <li>Estrategias de email marketing y automatización.</li>
+                  <li>
+                    Creación y gestión de contenido para blogs y sitios web.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Gestión de Redes Sociales (Community Manager)</h4>
+                <ul class="service-items">
+                  <li>Creación de contenido y publicaciones.</li>
+                  <li>Gestión de interacciones y comentarios.</li>
+                  <li>Análisis de métricas y reportes de rendimiento.</li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>SEO y SEM</h4>
+                <ul class="service-items">
+                  <li>Optimización de sitios web para motores de búsqueda.</li>
+                  <li>Investigación de palabras clave.</li>
+                  <li>Campañas de marketing en buscadores (SEM).</li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Diseño Gráfico</h4>
+                <ul class="service-items">
+                  <li>Creación de logotipos e identidad visual.</li>
+                  <li>
+                    Diseño de materiales publicitarios (banners, flyers,
+                    tarjetas).
+                  </li>
+                  <li>Diseño de contenido visual para redes sociales.</li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Gestión de Marca</h4>
+                <ul class="service-items">
+                  <li>Desarrollo de branding y posicionamiento.</li>
+                  <li>Diseño de campañas y estrategias de marca.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="service-category">
+              <h3>5. Diseño UX/UI</h3>
+              <div class="service-subcategory">
+                <h4>Investigación de Usuario</h4>
+                <ul class="service-items">
+                  <li>Análisis de necesidades y comportamiento de usuarios.</li>
+                  <li>Creación de personas y mapas de experiencia.</li>
+                  <li>Testeo de usabilidad y estudios de usuarios.</li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Diseño de Experiencia de Usuario (UX)</h4>
+                <ul class="service-items">
+                  <li>
+                    Desarrollo de flujos de usuario y diagramas de interacción.
+                  </li>
+                  <li>
+                    Creación de wireframes y prototipos de alta fidelidad.
+                  </li>
+                  <li>
+                    Optimización de la navegación y estructura de la
+                    información.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Diseño de Interfaces de Usuario (UI)</h4>
+                <ul class="service-items">
+                  <li>Diseño visual de interfaces y aplicaciones.</li>
+                  <li>
+                    Selección de tipografía, colores, y elementos gráficos.
+                  </li>
+                  <li>
+                    Creación de bibliotecas de componentes y guías de estilo.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Prototipado y Testeo de Usabilidad</h4>
+                <ul class="service-items">
+                  <li>Desarrollo de prototipos interactivos.</li>
+                  <li>
+                    Realización de pruebas de usabilidad con usuarios reales.
+                  </li>
+                  <li>
+                    Iteración y refinamiento del diseño basado en feedback.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Consultoría UX/UI</h4>
+                <ul class="service-items">
+                  <li>Análisis y auditoría de experiencia de usuario.</li>
+                  <li>Recomendaciones de mejora para interfaces existentes.</li>
+                  <li>Capacitación y workshops en diseño UX/UI.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Lista de Servicios End-->
+      <div data-category="manual-General-de-Ventas">
+        <div class="manual">
+          <h4>1. Descripción General de los Servicios</h4>
+          <div class="services-list">
+            <div class="service-category">
+              <h3>1.1 Resumen de cada Servicio</h3>
+              <div class="service-subcategory">
+                <h4>Diseño y Desarrollo Web:</h4>
+                <ul class="service-items">
+                  <li>
+                    <strong>Descripción:</strong> Creación de sitios web
+                    personalizados que cumplen con las necesidades del cliente,
+                    desde landing pages hasta plataformas complejas de
+                    e-commerce.
+                  </li>
+                  <li>
+                    <strong>Características clave:</strong> Diseño responsivo,
+                    optimización para motores de búsqueda (SEO), integración con
+                    sistemas de gestión de contenidos (CMS), y seguridad web.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Desarrollo de Aplicaciones Móviles:</h4>
+                <ul class="service-items">
+                  <li>
+                    <strong> Descripción:</strong> Diseño y desarrollo de
+                    aplicaciones móviles nativas e híbridas para iOS y Android,
+                    adaptadas a las necesidades específicas del negocio.
+                  </li>
+                  <li>
+                    <strong>Características clave:</strong> UX/UI optimizado
+                    para dispositivos móviles, integración con servicios
+                    backend, y soporte para múltiples plataformas.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Desarrollo de Software de Escritorio:</h4>
+                <ul class="service-items">
+                  <li>
+                    <strong> Descripción:</strong> Desarrollo de aplicaciones de
+                    escritorio robustas y seguras para Windows, macOS, y Linux,
+                    adaptadas a procesos empresariales específicos.
+                  </li>
+                  <li>
+                    <strong>Características clave:</strong> Alta performance,
+                    integración con hardware y sistemas existentes,
+                    personalización avanzada.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Marketing Digital y Community Management:</h4>
+                <ul class="service-items">
+                  <li>
+                    <strong> Descripción:</strong> Servicios de marketing
+                    digital que incluyen gestión de redes sociales, campañas
+                    publicitarias, y optimización de la presencia online.
+                  </li>
+                  <li>
+                    <strong>Características clave:</strong> Creación de
+                    contenido, gestión de campañas, análisis de métricas, y
+                    crecimiento orgánico en plataformas sociales.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Diseño Gráfico y UX/UI:</h4>
+                <ul class="service-items">
+                  <li>
+                    <strong> Descripción:</strong> Creación de identidad visual,
+                    materiales publicitarios, y diseño de interfaces de usuario
+                    centradas en la experiencia del cliente.
+                  </li>
+
+                  <li>
+                    <strong>Características clave:</strong> Branding coherente,
+                    diseño intuitivo y accesible, prototipado y testeo de
+                    interfaces.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="service-category">
+              <h3>1.2 Casos de Uso Comunes y Ejemplos de Proyectos Exitosos</h3>
+              <div class="service-subcategory">
+                <h4>Casos de Uso:</h4>
+                <ul class="service-items">
+                  <li>
+                    Rediseño de sitios web antiguos para mejorar la conversión.
+                  </li>
+                  <li>
+                    Desarrollo de apps móviles para empresas que buscan expandir
+                    su alcance.
+                  </li>
+                  <li>
+                    Creación de software de escritorio para automatizar procesos
+                    internos.
+                  </li>
+                  <li>Gestión de redes sociales para marcas emergentes.</li>
+                  <li>
+                    Diseño de interfaces amigables para aplicaciones complejas.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Ejemplos de Proyectos Exitosos:</h4>
+                <ul class="service-items">
+                  <li>
+                    Proyecto X: Rediseño de un sitio web que aumentó la tasa de
+                    conversión en un 30%.
+                  </li>
+                  <li>
+                    Proyecto Y: Desarrollo de una app móvil que facilitó la
+                    fidelización de clientes.
+                  </li>
+                  <li>
+                    Proyecto Z: Creación de una campaña de marketing digital que
+                    duplicó el tráfico web.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="service-category">
+              <h3>2. Identificación de Necesidades del Cliente</h3>
+              <div class="service-category">
+                <h3>
+                  2.1 Cómo Realizar Preguntas para Identificar Necesidades
+                </h3>
+                <div class="service-subcategory">
+                  <h4>Preguntas Abiertas:</h4>
+                  <ul class="service-items">
+                    <li>
+                      ¿Cuáles son los principales desafíos que enfrenta su
+                      empresa en línea?
+                    </li>
+                    <li>
+                      ¿Qué objetivos espera lograr con un nuevo sitio web/app?
+                    </li>
+                    <li>
+                      ¿Cómo interactúan actualmente sus clientes con su marca?
+                    </li>
+                  </ul>
+                </div>
+                <div class="service-subcategory">
+                  <h4>Preguntas Cerradas:</h4>
+                  <ul class="service-items">
+                    <li>¿Está satisfecho con su actual tasa de conversión?</li>
+                    <li>
+                      ¿Tiene ya un proveedor para el mantenimiento de su sitio
+                      web?
+                    </li>
+                    <li>
+                      ¿Su empresa utiliza alguna estrategia de marketing
+                      digital?
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="service-subcategory">
+                  <h3>
+                    2.2 Métodos para Diagnosticar Problemas y Ofrecer Soluciones
+                  </h3>
+                  <div class="service-subcategory">
+                    <h4>Análisis de la Situación Actual:</h4>
+                    <ul class="service-items">
+                      <li>
+                        Revisión de la presencia online actual del cliente
+                        (sitio web, redes sociales).
+                      </li>
+                      <li>
+                        Evaluación de la tecnología y herramientas que utiliza.
+                      </li>
+                      <li>
+                        Identificación de puntos débiles en la experiencia del
+                        usuario.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="service-subcategory">
+                  <h4>Propuesta de Soluciones Personalizadas:</h4>
+                  <ul class="service-items">
+                    <li>
+                      Sugerencia de un rediseño web para mejorar la experiencia
+                      del usuario.
+                    </li>
+                    <li>
+                      Desarrollo de una aplicación móvil para mejorar la
+                      interacción con los clientes.
+                    </li>
+                    <li>
+                      Implementación de campañas de marketing digital para
+                      aumentar la visibilidad.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-category">
+              <h3>3. Argumentos de Venta</h3>
+              <h3>3.1 Beneficios Clave de Cada Servicio</h3>
+              <div class="service-subcategory">
+                <h4>Diseño y Desarrollo Web:</h4>
+                <ul class="service-items">
+                  <li>Mejora de la presencia online y la visibilidad.</li>
+                  <li>
+                    Optimización para motores de búsqueda (SEO) para atraer más
+                    tráfico.
+                  </li>
+                  <li>
+                    Diseño responsivo para asegurar la accesibilidad desde
+                    cualquier dispositivo.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Desarrollo de Aplicaciones Móviles:</h4>
+                <ul class="service-items">
+                  <li>
+                    Aumento de la lealtad del cliente a través de una app
+                    dedicada.
+                  </li>
+                  <li>Acceso a una nueva audiencia en las tiendas de apps.</li>
+                  <li>
+                    Integración de funciones avanzadas como notificaciones push
+                    y geolocalización.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Desarrollo de Software de Escritorio:</h4>
+                <ul class="service-items">
+                  <li>
+                    Automatización de procesos internos para mejorar la
+                    eficiencia.
+                  </li>
+                  <li>Integración personalizada con sistemas existentes.</li>
+                  <li>Seguridad robusta para proteger datos críticos.</li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Marketing Digital y Community Management:</h4>
+                <ul class="service-items">
+                  <li>
+                    Aumento del tráfico y la conversión a través de estrategias
+                    de marketing digital.
+                  </li>
+                  <li>
+                    Crecimiento orgánico en redes sociales y mejor engagement
+                    con la audiencia.
+                  </li>
+                  <li>
+                    Medición precisa de resultados para optimizar futuras
+                    campañas.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Diseño Gráfico y UX/UI:</h4>
+                <ul class="service-items">
+                  <li>
+                    Mejora en la percepción de la marca y la coherencia visual.
+                  </li>
+                  <li>
+                    Interfaces de usuario intuitivas que aumentan la
+                    satisfacción del cliente.
+                  </li>
+                  <li>
+                    Prototipos y testeo para asegurar la calidad del producto
+                    final.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="service-category">
+              <h3>
+                3.2 Diferenciadores de tus Servicios Frente a la Competencia
+              </h3>
+              <div class="service-subcategory">
+                <h4>Calidad en el Diseño y Desarrollo:</h4>
+                <ul class="service-items">
+                  <li>Servicio post-venta confiable y accesible.</li>
+                  <li>
+                    Actualizaciones regulares y soporte técnico especializado.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Enfoque Personalizado:</h4>
+                <ul class="service-items">
+                  <li>
+                    Soluciones adaptadas a las necesidades específicas del
+                    cliente.
+                  </li>
+                  <li>
+                    Comunicación constante y colaboración en cada etapa del
+                    proyecto.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="service-category">
+              <h3>4. Resolución de Objeciones Comunes</h3>
+              <h3>
+                4.1 Cómo Abordar Preocupaciones sobre el Costo, Tiempo de
+                Desarrollo, o Complejidad Técnica
+              </h3>
+              <div class="service-subcategory">
+                <h4>Costo:</h4>
+                <ul class="service-items">
+                  <li>Explicar el retorno de inversión (ROI) esperado.</li>
+                  <li>Ofrecer opciones de financiamiento o pago en cuotas.</li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Tiempo de Desarrollo:</h4>
+                <ul class="service-items">
+                  <li>Presentar un cronograma claro y realista.</li>
+                  <li>
+                    Explicar cómo las fases de desarrollo permiten la entrega
+                    gradual de funcionalidades.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Complejidad Técnica::</h4>
+                <ul class="service-items">
+                  <li>
+                    Asegurar que el equipo tiene la experiencia y las
+                    habilidades necesarias.
+                  </li>
+                  <li>
+                    Ofrecer un plan detallado de cómo se abordarán los desafíos
+                    técnicos.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Marketing Digital y Community Management:</h4>
+                <ul class="service-items">
+                  <li>
+                    Aumento del tráfico y la conversión a través de estrategias
+                    de marketing digital.
+                  </li>
+                  <li>
+                    Crecimiento orgánico en redes sociales y mejor engagement
+                    con la audiencia.
+                  </li>
+                  <li>
+                    Medición precisa de resultados para optimizar futuras
+                    campañas.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Diseño Gráfico y UX/UI:</h4>
+                <ul class="service-items">
+                  <li>
+                    Mejora en la percepción de la marca y la coherencia visual.
+                  </li>
+                  <li>
+                    Interfaces de usuario intuitivas que aumentan la
+                    satisfacción del cliente.
+                  </li>
+                  <li>
+                    Prototipos y testeo para asegurar la calidad del producto
+                    final.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="service-category">
+              <h3>
+                4.2 Respuestas Preparadas para Preguntas Frecuentes de los
+                Clientes
+              </h3>
+              <div class="service-subcategory">
+                <h4>¿Por qué es tan caro?</h4>
+                <ul class="service-items">
+                  <li>
+                    "La inversión refleja la calidad y el impacto duradero que
+                    tendrá el servicio en su negocio."
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>¿Cuánto tiempo tomará?</h4>
+                <ul class="service-items">
+                  <li>
+                    "Nuestro proceso está diseñado para ser eficiente y
+                    detallado, garantizando la entrega en el tiempo acordado."
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>¿Puedo actualizar el servicio más tarde?</h4>
+                <ul class="service-items">
+                  <li>
+                    "Sí, ofrecemos opciones de mantenimiento y actualización
+                    para asegurar que su servicio evolucione con sus
+                    necesidades."
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="service-category">
+              <h3>5. Proceso de Venta</h3>
+              <h3>
+                5.1 Guía Paso a Paso para la Venta, desde el Primer Contacto
+                hasta el Cierre
+              </h3>
+              <div class="service-subcategory">
+                <h4>Primer Contacto:</h4>
+                <ul class="service-items">
+                  <li>
+                    Establecer una relación y entender las necesidades iniciales
+                    del cliente.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Presentación de la Propuesta:</h4>
+                <ul class="service-items">
+                  <li>
+                    Elaborar una propuesta detallada que resalte cómo los
+                    servicios abordarán los desafíos del cliente.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Negociación y Ajustes:</h4>
+                <ul class="service-items">
+                  <li>
+                    Asegurarse de que la propuesta sea atractiva para el
+                    cliente, realizando ajustes si es necesario.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Cierre de la Venta:</h4>
+                <ul class="service-items">
+                  <li>
+                    Formalizar el acuerdo, detallando los próximos pasos y las
+                    expectativas.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="service-category">
+              <h3>
+                5.2 Normas sobre Cómo y Cuándo Presentar Ofertas Especiales o
+                Descuentos
+              </h3>
+              <div class="service-subcategory">
+                <h4>Ofertas Especiales:</h4>
+                <ul class="service-items">
+                  <li>
+                    Presentar ofertas durante campañas de marketing estacionales
+                    o en momentos clave del ciclo de ventas.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Descuentos:</h4>
+                <ul class="service-items">
+                  <li>
+                    Ofrecer descuentos estratégicamente para cerrar ventas,
+                    basados en el volumen del proyecto o la relación a largo
+                    plazo con el cliente.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="service-category">
+              <h3>
+                5.3 Procedimientos para el Seguimiento y la Fidelización de
+                Clientes
+              </h3>
+              <div class="service-subcategory">
+                <h4>Seguimiento Post-Venta:</h4>
+                <ul class="service-items">
+                  <li>
+                    Realizar una llamada de seguimiento después de la entrega
+                    del servicio para asegurar la satisfacción del cliente.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Programas de Fidelización::</h4>
+                <ul class="service-items">
+                  <li>
+                    Ofrecer beneficios exclusivos para clientes recurrentes.
+                  </li>
+                  <li>
+                    Mantener una comunicación constante y compartir
+                    actualizaciones relevantes que puedan ser de interés para el
+                    cliente.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Manual General Ventas End-->
+      <div data-category="manual-de-Ventas-FoodFlow">
+        <div class="manual">
+          <div class="services-list">
+            <div class="service-category">
+              <h3>1. Descripción del Servicio</h3>
+              <div class="service-subcategory">
+                <h4>Qué es FoodFlow:</h4>
+                <ul class="service-items">
+                  <li>
+                    FoodFlow es un sistema de menú digital diseñado para
+                    restaurantes que permite la visualización del menú, gestión
+                    de pedidos y promociones mediante tecnología avanzada.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-subcategory">
+                <h4>Características Principales:</h4>
+                <ul class="service-items">
+                  <li>
+                    <strong>Visualización del Menú:</strong> Muestra el menú
+                    completo con imágenes, descripciones, precios y categorías
+                    como entradas, platos principales, postres, bebidas, etc.
+                    Incluye filtros para dietas especiales.
+                  </li>
+                  <li>
+                    <strong>Lectura por Código QR:</strong> Acceso al menú
+                    mediante escaneo de QR desde cualquier dispositivo.
+                    Diferenciación por mesa para pedidos internos.
+                  </li>
+                  <li>
+                    <strong>Realización de Pedidos:</strong> Pedidos desde la
+                    página, con opciones para programar entregas e integración
+                    con sistemas de pago.
+                  </li>
+                  <li>
+                    <strong>Personalización del Pedido:</strong> - Permite
+                    personalizar y guardar preferencias de pedidos. -
+                  </li>
+                  <li>
+                    <strong>Promociones y Descuentos:</strong> Gestión de
+                    promociones, descuentos automáticos y cupones digitales.
+                  </li>
+                  <li>
+                    <strong>Especiales del Día:</strong> Gestión y resaltado de
+                    menús especiales.
+                  </li>
+                  <li>
+                    <strong>Gestión de Menús Personalizados:</strong>
+                    Personalización del menú por el restaurante, incluyendo
+                    marca y estilo.
+                  </li>
+                  <li>
+                    <strong>Recomendaciones Automáticas:</strong> Sugerencias
+                    basadas en el historial de pedidos y recomendaciones de
+                    maridaje.
+                  </li>
+                  <li>
+                    <strong>Reseñas y Calificaciones:</strong> - Permite dejar y
+                    mostrar reseñas y calificaciones de clientes.
+                  </li>
+                  <li>
+                    <strong>Soporte Multilingüe:</strong> Opción para cambiar el
+                    idioma del menú.
+                  </li>
+                  <li>
+                    <strong>Gestión de Inventarios:</strong> Integración con el
+                    sistema de inventario para mostrar disponibilidad en tiempo
+                    real.
+                  </li>
+                  <li>
+                    <strong>Integración con Redes Sociales:</strong> Compartir
+                    promociones en redes sociales y permitir que clientes
+                    compartan sus experiencias.
+                  </li>
+                  <li>
+                    <strong>Gestión de Inventarios:</strong> Integración con el
+                    sistema de inventario para mostrar disponibilidad en tiempo
+                    real.
+                  </li>
+                  <li>
+                    <strong>Analytics y Reportes:</strong> Estadísticas y
+                    análisis sobre ventas, comportamiento de usuarios, etc.
+                  </li>
+                  <li>
+                    <strong>Manejo de Reservas:</strong> Sistema integrado de
+                    reservas de mesas.
+                  </li>
+                  <li>
+                    <strong>Multiplataforma y Responsive:</strong> Compatible
+                    con móviles, tablets y computadoras.
+                  </li>
+                  <li>
+                    <strong>Sistema de Notificaciones:</strong> Notificaciones
+                    push para promociones y actualizaciones de pedidos.
+                  </li>
+                  <li>
+                    <strong>Manejo de Clientes y Fidelización:</strong> Sistema
+                    de recompensas y manejo de datos de clientes.
+                  </li>
+                  <li>
+                    <strong>Seguridad y Cumplimiento Legal:</strong> Cumple con
+                    leyes de privacidad y seguridad de datos.
+                  </li>
+                  <li>
+                    <strong>Soporte y Ayuda al Cliente:</strong> Chat en vivo y
+                    sección de FAQ.
+                  </li>
+                  <li>
+                    <strong>Integración con Sistemas de Terceros:</strong>
+                    Conexión con sistemas POS y servicios de entrega a
+                    domicilio.
+                  </li>
+                </ul>
+              </div>
+              <div class="service-category">
+                <h3>2. Audiencia Objetivo</h3>
+                <div class="service-subcategory">
+                  <h4>Clientes Ideales:</h4>
+                  <ul class="service-items">
+                    <li>
+                      Restaurantes que buscan modernizar su sistema de menú.
+                    </li>
+                    <li>
+                      Restaurantes interesados en reducir costos de impresión y
+                      mejorar la gestión de pedidos.
+                    </li>
+                  </ul>
+                </div>
+                <div class="service-subcategory">
+                  <h4>Criterios para Identificar Clientes Potenciales:</h4>
+                  <ul class="service-items">
+                    <li>
+                      Restaurantes con interés en tecnología y eficiencia
+                      operativa.
+                    </li>
+                    <li>
+                      Restaurantes que desean mejorar la experiencia del
+                      cliente.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="service-category">
+                <h3>3. Presentación del Producto</h3>
+                <div class="service-subcategory">
+                  <h4>Cómo Realizar una Demostración:</h4>
+                  <ul class="service-items">
+                    <li>Mostrar el acceso al menú mediante el código QR.</li>
+                    <li>
+                      Demostrar la interfaz y opciones de personalización.
+                    </li>
+                    <li>
+                      Explicar el proceso de pedidos y cómo se gestionan las
+                      promociones.
+                    </li>
+                  </ul>
+                </div>
+                <div class="service-subcategory">
+                  <h4>Casos de Uso y Testimonios:</h4>
+                  <ul class="service-items">
+                    <li>
+                      Ejemplos de restaurantes que han implementado FoodFlow.
+                    </li>
+                    <li>
+                      Testimonios de clientes destacando mejoras en eficiencia y
+                      satisfacción.
+                    </li>
+                  </ul>
+                </div>
+                <div class="service-subcategory">
+                  <h3>4. Argumentos de Venta</h3>
+                  <div class="service-subcategory">
+                    <h4>Beneficios Clave:</h4>
+                    <ul class="service-items">
+                      <li>Reducción de costos en impresión de menús.</li>
+                      <li>
+                        Mejora en la experiencia del cliente mediante opciones
+                        de personalización y recomendaciones.
+                      </li>
+                      <li>
+                        Eficiencia en la gestión de pedidos y promociones.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="service-subcategory">
+                    <h4>Diferenciadores</h4>
+                    <ul class="service-items">
+                      <li>
+                        Integración con sistemas de inventario y redes sociales.
+                      </li>
+                      <li>Soporte para múltiples idiomas y plataformas.</li>
+                      <li>
+                        Funcionalidades avanzadas como recomendaciones
+                        automáticas y gestión de reservas.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="service-category">
+                <h3>5. Preguntas Frecuentes y Respuestas</h3>
+                <div class="service-subcategory">
+                  <h4>¿Cómo se actualizan los menús?:</h4>
+                  <ul class="service-items">
+                    <li>
+                      Los menús se actualizan en tiempo real a través del panel
+                      de administración del restaurante.
+                    </li>
+                  </ul>
+                </div>
+                <div class="service-subcategory">
+                  <h4>
+                    ¿Qué pasa si el cliente no tiene internet en su teléfono?:
+                  </h4>
+                  <ul class="service-items">
+                    <li>Se puede ofrecer un menú impreso como alternativa.</li>
+                  </ul>
+                </div>
+                <div class="service-subcategory">
+                  <h4>
+                    ¿Cómo se integra con los sistemas de pedidos existentes?:
+                  </h4>
+                  <ul class="service-items">
+                    <li>
+                      FoodFlow se integra con sistemas POS y servicios de
+                      entrega a domicilio.
+                    </li>
+                  </ul>
+                </div>
+                <div class="service-subcategory">
+                  <h4>¿Cuál es el costo y cuáles son las opciones de pago?:</h4>
+                  <ul class="service-items">
+                    <li>
+                      Ofrecemos varios paquetes según las necesidades del
+                      restaurante. Los detalles se proporcionan en la propuesta
+                      personalizada.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="service-category">
+                <h3>6. Guía de Precios y Paquetes</h3>
+                <div class="service-subcategory">
+                  <h4>Opciones de Precios Disponibles:</h4>
+                  <ul class="service-items">
+                    <li>
+                      <strong>Paquete Básico:</strong> Incluye funcionalidades
+                      esenciales como visualización del menú y gestión de
+                      pedidos.
+                    </li>
+                    <li>
+                      <strong>Paquete Avanzado:</strong> Incluye todas las
+                      funcionalidades, como recomendaciones automáticas y
+                      soporte multilingüe.
+                    </li>
+                  </ul>
+                </div>
+                <div class="service-subcategory">
+                  <h4>Justificación del Costo:</h4>
+                  <ul class="service-items">
+                    <li>
+                      Explicación de cómo cada paquete añade valor y mejora la
+                      eficiencia del restaurante.
+                    </li>
+                  </ul>
+                </div>
+                <div class="service-subcategory">
+                  <h4>Opciones de Personalización:</h4>
+                  <ul class="service-items">
+                    <li>
+                      Personalización del diseño del menú según la marca del
+                      restaurante.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="service-category">
+                <h3>7. Proceso de Implementación</h3>
+                <div class="service-subcategory">
+                  <h4>Requisitos para Comenzar:</h4>
+                  <ul class="service-items">
+                    <li>
+                      Cualquier dispositivo que cuente con navegador, conexión a
+                      internet.
+                    </li>
+                  </ul>
+                </div>
+                <div class="service-subcategory">
+                  <h4>Cronograma Típico de Implementación:</h4>
+                  <ul class="service-items">
+                    <li>
+                      Tiempo estimado desde la firma del contrato hasta la
+                      puesta en marcha del menú digital.
+                    </li>
+                  </ul>
+                </div>
+                <div class="service-subcategory">
+                  <h4>Soporte Técnico y Mantenimiento:</h4>
+                  <ul class="service-items">
+                    <li>
+                      Disponibilidad de asistencia técnica y procedimientos para
+                      resolver problemas.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="service-category">
+                <h3>8. Estrategias de Venta</h3>
+                <div class="service-subcategory">
+                  <h4>Estrategias para Contactar Nuevos Clientes:</h4>
+                  <ul class="service-items">
+                    <li>
+                      Métodos para identificar y contactar a restaurantes
+                      interesados.
+                    </li>
+                    <li>Técnicas para realizar presentaciones efectivas.</li>
+                  </ul>
+                </div>
+                <div class="service-subcategory">
+                  <h4>Tácticas de Cierre de Ventas:</h4>
+                  <ul class="service-items">
+                    <li>
+                      Estrategias para manejar objeciones finales y cerrar la
+                      venta.
+                    </li>
+                    <li>
+                      Ofertas y promociones especiales para incentivar la
+                      compra.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="service-category">
+                <h3>9. Documentación de Apoyo</h3>
+                <div class="service-subcategory">
+                  <h4>Materiales de Marketing:</h4>
+                  <ul class="service-items">
+                    <li>
+                      Folletos, presentaciones y videos explicativos sobre
+                      FoodFlow.
+                    </li>
+                    <li>Casos de estudio y demostraciones en video.</li>
+                  </ul>
+                </div>
+                <div class="service-subcategory">
+                  <h4>Materiales para Demostraciones:</h4>
+                  <ul class="service-items">
+                    <li>
+                      Guías para realizar demostraciones prácticas del menú
+                      digital.
+                    </li>
+                    <li>Documentación técnica para detalles específicos.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="service-category">
+                <h3>10. Capacitación del Personal de Ventas</h3>
+                <div class="service-subcategory">
+                  <h4>Entrenamiento en el Producto:</h4>
+                  <ul class="service-items">
+                    <li>
+                      Sesiones de capacitación sobre todas las funcionalidades
+                      de FoodFlow.
+                    </li>
+                    <li>Ejercicios prácticos para familiarización.</li>
+                  </ul>
+                </div>
+                <div class="service-subcategory">
+                  <h4>Capacitación en Técnicas de Venta:</h4>
+                  <ul class="service-items">
+                    <li>
+                      Formación en habilidades de venta para servicios
+                      tecnológicos.
+                    </li>
+                    <li>Simulaciones de llamadas y reuniones con clientes.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="service-category">
+                <h3>11. Procedimientos de Postventa</h3>
+                <div class="service-subcategory">
+                  <h4>Seguimiento con Clientes:</h4>
+                  <ul class="service-items">
+                    <li>
+                      Procedimientos para hacer seguimiento después de la venta.
+                    </li>
+                  </ul>
+                </div>
+                <div class="service-subcategory">
+                  <h4>Gestión de Problemas y Soporte:</h4>
+                  <ul class="service-items">
+                    <li>
+                      Cómo manejar problemas técnicos y consultas posteriores.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--12. Actualización del Manual-->
+              <div class="service-category">
+                <h3>12. Actualización del Manual</h3>
+                <div class="service-subcategory">
+                  <h4>Proceso de Actualización:</h4>
+                  <ul class="service-items">
+                    <li>Cómo se mantendrá el manual actualizado.</li>
+                  </ul>
+                </div>
+                <div class="service-subcategory">
+                  <h4>Recopilación de Feedback:</h4>
+                  <ul class="service-items">
+                    <li>
+                      Cómo recolectar y utilizar el feedback para mejorar el
+                      manual y procesos de venta.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--12. Actualización del Manual-->
+              <!--13. Ejemplos de Ventas Exitosas-->
+              <div class="service-category">
+                <h3>13. Ejemplos de Ventas Exitosas</h3>
+                <div class="service-subcategory">
+                  <h4>Estudios de Caso:</h4>
+                  <ul class="service-items">
+                    <li>Ejemplos detallados de implementaciones exitosas.</li>
+                  </ul>
+                </div>
+                <div class="service-subcategory">
+                  <h4>Recopilación de Feedback:</h4>
+                  <ul class="service-items">
+                    <li>
+                      Cómo recolectar y utilizar el feedback para mejorar el
+                      manual y procesos de venta.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--13. Actualización del Manual-->
+              <!--14. Ejemplos de Ventas Exitosas-->
+              <div class="service-category">
+                <h3>14. Políticas y Normas</h3>
+                <div class="service-subcategory">
+                  <h4>Políticas de Venta y Contratación:</h4>
+                  <ul class="service-items">
+                    <li>
+                      Reglas y directrices para la venta del servicio y gestión
+                      de contratos.
+                    </li>
+                  </ul>
+                </div>
+                <div class="service-subcategory">
+                  <h4>Normas de Comunicación con Clientes:</h4>
+                  <ul class="service-items">
+                    <li>
+                      Estándares para comunicación efectiva y profesional.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--14. Actualización del Manual-->
+              <!--15. Ejemplos de Ventas Exitosas-->
+              <div class="service-category">
+                <h3>15. Recursos Adicionales</h3>
+                <div class="service-subcategory">
+                  <h4>Enlaces Útiles:</h4>
+                  <ul class="service-items">
+                    <li>
+                      Recursos en línea, documentación técnica y sitios web
+                      relevantes.
+                    </li>
+                  </ul>
+                </div>
+                <div class="service-subcategory">
+                  <h4>Contactos de Soporte:</h4>
+                  <ul class="service-items">
+                    <li>
+                      Información de contacto para soporte interno y consultas
+                      técnicas.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--15. Actualización del Manual-->
+            </div>
+          </div>
+        </div>
+        <!-- Manual de ventas FoodFlow End-->
+      </div>
+    </div>
+
+    <script src="assets/js/dashboard.js"></script>
+  </body>
+</html>
